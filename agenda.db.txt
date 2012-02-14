@@ -1,0 +1,58 @@
+Database: Agenda
++-----------+----------+------------+
+|  Tables   | Columns  | Total Rows |
++-----------+----------+------------+
+| addresses |        5 |         32 |
+| emails    |        3 |          5 |
+| folks     |        8 |        104 |
+| info      |        2 |         49 |
+| phones    |        3 |         11 |
++-----------+----------+------------+
+5 rows in set.
+
+Database: Agenda  Table: addresses  Rows: 32
++---------+------------------+-----------------+------+-----+---------+-------+----------------------+---------+
+| Field   | Type             | Collation       | Null | Key | Default | Extra | Privileges           | Comment |
++---------+------------------+-----------------+------+-----+---------+-------+----------------------+---------+
+| id      | int(10) unsigned |                 | NO   | PRI |         |       | select,insert,update |         |
+| address | text             | utf8_general_ci | YES  |     |         |       | select,insert,update |         |
+| zip     | varchar(8)       | utf8_general_ci | YES  |     |         |       | select,insert,update |         |
+| city    | varchar(128)     | utf8_general_ci | YES  |     |         |       | select,insert,update |         |
+| country | varchar(128)     | utf8_general_ci | YES  |     |         |       | select,insert,update |         |
++---------+------------------+-----------------+------+-----+---------+-------+----------------------+---------+
+Database: Agenda  Table: emails  Rows: 5
++---------+------------------+-----------------+------+-----+---------+-------+----------------------+---------+
+| Field   | Type             | Collation       | Null | Key | Default | Extra | Privileges           | Comment |
++---------+------------------+-----------------+------+-----+---------+-------+----------------------+---------+
+| id      | int(10) unsigned |                 | NO   | MUL |         |       | select,insert,update |         |
+| email   | varchar(32)      | utf8_general_ci | NO   | PRI |         |       | select,insert,update |         |
+| comment | varchar(512)     | utf8_general_ci | YES  |     |         |       | select,insert,update |         |
++---------+------------------+-----------------+------+-----+---------+-------+----------------------+---------+
+Database: Agenda  Table: folks  Rows: 104
++---------+------------------+-----------------+------+-----+---------------------+-----------------------------+----------------------+---------+
+| Field   | Type             | Collation       | Null | Key | Default             | Extra                       | Privileges           | Comment |
++---------+------------------+-----------------+------+-----+---------------------+-----------------------------+----------------------+---------+
+| id      | int(10) unsigned |                 | NO   | PRI |                     | auto_increment              | select,insert,update |         |
+| name    | varchar(256)     | utf8_general_ci | NO   |     |                     |                             | select,insert,update |         |
+| surname | varchar(256)     | utf8_general_ci | YES  |     |                     |                             | select,insert,update |         |
+| birth   | date             |                 | YES  |     |                     |                             | select,insert,update |         |
+| gender  | enum('m','f')    | utf8_general_ci | NO   |     | m                   |                             | select,insert,update |         |
+| created | timestamp        |                 | NO   |     | 0000-00-00 00:00:00 |                             | select,insert,update |         |
+| updated | timestamp        |                 | NO   |     | CURRENT_TIMESTAMP   | on update CURRENT_TIMESTAMP | select,insert,update |         |
+| active  | tinyint(1)       |                 | NO   |     | 1                   |                             | select,insert,update |         |
++---------+------------------+-----------------+------+-----+---------------------+-----------------------------+----------------------+---------+
+Database: Agenda  Table: info  Rows: 49
++-------+------------------+-----------------+------+-----+---------+-------+----------------------+---------+
+| Field | Type             | Collation       | Null | Key | Default | Extra | Privileges           | Comment |
++-------+------------------+-----------------+------+-----+---------+-------+----------------------+---------+
+| id    | int(10) unsigned |                 | NO   | PRI |         |       | select,insert,update |         |
+| note  | text             | utf8_general_ci | YES  |     |         |       | select,insert,update |         |
++-------+------------------+-----------------+------+-----+---------+-------+----------------------+---------+
+Database: Agenda  Table: phones  Rows: 11
++---------+------------------+-----------------+------+-----+---------+-------+----------------------+---------+
+| Field   | Type             | Collation       | Null | Key | Default | Extra | Privileges           | Comment |
++---------+------------------+-----------------+------+-----+---------+-------+----------------------+---------+
+| id      | int(10) unsigned |                 | NO   | MUL |         |       | select,insert,update |         |
+| phone   | varchar(32)      | utf8_general_ci | NO   | PRI |         |       | select,insert,update |         |
+| comment | varchar(512)     | utf8_general_ci | YES  |     |         |       | select,insert,update |         |
++---------+------------------+-----------------+------+-----+---------+-------+----------------------+---------+

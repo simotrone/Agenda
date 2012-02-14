@@ -1,0 +1,157 @@
+body {
+    font-size: 0.8em;
+    margin: 2em;
+    font-family: arial,helvetica,sans-serif;
+    min-width: 440px;
+}
+body > p {
+    background-color: #E9D57B;
+    padding: 0.2em 1em;
+}
+body > p:first-child {
+    font-weight: bold;
+    margin-bottom: 0.2em;
+/*    height: 1.6em; */
+    line-height: 1.4em;
+    -moz-border-radius-topleft: 1em;
+    -moz-border-radius-topright: 1em;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+}
+body > p:last-child {
+    text-align: center;
+    -moz-border-radius-bottomleft: 1em;
+    -moz-border-radius-bottomright: 1em;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+h1 {
+    background-color: #E9D57B;
+    padding: 0.2em 0.5em;
+    margin: 0.2em 0;
+    -moz-border-radius-topleft: 0.5em;
+    -moz-border-radius-topright: 0.5em;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+}
+.clearer {
+    clear: both;
+}
+table {
+    border: 1px solid #E9D57B;
+    width: 25em;
+    padding: 0.2em;
+}
+tr:hover {
+    background-color: #FAE79D;
+}
+
+.left, .right {
+    padding: 0 1em;
+    margin: 0.5em;
+}
+.left  { float: left;  }
+.right { float: right; }
+
+#folk tr > td:first-child {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+/* Styling the autosuggest */
+input {
+    font-size: 0.8em;
+    padding: 0em 0.3em;
+    border: 1px solid #CCBB99;
+}
+
+#suggestions {
+    position:absolute;
+    background-color: #FAE68C;
+    border: 1px solid #888;
+    z-index: 10;
+    margin-top: 2em;
+    margin-left: 2em;
+}
+#suggestions ul {
+    font-size: 0.7em;
+    list-style: none;
+    margin: 0;
+    padding: 0.3em 0;
+}
+#suggestions ul li.selected {
+    background-color: #ffb;
+}
+#suggestions ul li {
+    list-style-type:none;
+    display:block;
+    margin:0;
+    padding: 0.1em 0.3em;
+    cursor:pointer;
+}
+
+/* #nav menu da http://www.htmldog.com/articles/suckerfish/dropdowns/ */
+#nav , #nav ul {
+    padding: 0.3em 0.1em 0.3em 0.1em;
+    margin: 0 0 0.7em;
+    list-style: none;
+
+/*    border: 1px solid #FFD700; */
+    background-color: #E9D57B;
+    font-weight: bold;
+}
+#nav a {
+    display: block;
+    text-decoration: none;
+    color: #0000CD;
+}
+#nav a:hover {
+    color: #800080;
+}
+#nav li {
+    float: left;
+    padding: 0;
+    width: 6em;
+    text-align: center;
+    border: 1px solid #E9D57B;
+    -moz-border-radius: 0.3em;
+}
+/* submenu style */
+#nav li > ul {
+    display: none;
+    position: absolute;
+/*    padding: 0.5em; */
+    padding: 0;
+    border: 2px solid #FFF;
+    background-color: #E9D57B;
+    -moz-border-radius-topright: 0.5em;
+    -moz-border-radius-bottomleft: 0.5em;
+    -moz-border-radius-bottomright: 0.5em;
+    border-top-right-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    -moz-box-shadow: 0 10px 10px #666;
+}
+#nav li:hover > ul {
+    display: block;
+    z-index: 5;
+}
+#nav li > ul > li {
+    clear: left;
+    width: 10em;
+    text-align: left;
+    padding: 0.3em 0.3em;
+}
+#nav li > ul > li:hover {
+    background-color: #FAE79D;
+}
+
+
+.error {
+    border: 2px solid #CD5C5C;
+    background-color: #EFCFCF;
+    font-size: 1.1em;
+    font-weight: bold;
+    line-height: 1.1;
+    padding: 1em;
+    margin: 2em;
+}
